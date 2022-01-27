@@ -10,6 +10,7 @@
 		<h2 class="text-2xl font-extrabold tracking-tight text-gray-900 capitalize">New Arrivals</h2>
 		<ProductList :products="products" />
 	</div>
+	<Footer />
 	<Cart />
   </div>
 </template>
@@ -22,6 +23,7 @@ import Hero from './components/ui/Hero.vue'
 import ProductList from './components/ui/ProductList.vue'
 import ProductCarousel from './components/ui/ProductCarousel.vue'
 import Cart from './components/ui/Cart.vue'
+import Footer from './components/layouts/Footer.vue'
 
 export default {
 	name: 'App',
@@ -30,7 +32,8 @@ export default {
 		Hero,
 		ProductList,
 		ProductCarousel,
-		Cart
+		Cart,
+		Footer
 	},
 	data() {
 		return {
