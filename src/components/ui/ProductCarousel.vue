@@ -22,10 +22,16 @@ export default {
 	data() {
 		return {
 			swiperOptions: {
-				slidesPerView: 4,
-				spaceBetween: 32,
+				slidesPerView: 2,
+				spaceBetween: 16,
 				autoHeight: true,
-				wrapperClass: 'swiper-wrapper items-stretch'
+				wrapperClass: 'swiper-wrapper items-stretch',
+				breakpoints: {
+					768: {
+						slidesPerView: 4,
+						spaceBetween: 32
+					}
+				}
 			}
 		}
 	},
