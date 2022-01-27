@@ -1,13 +1,13 @@
 <template>
 	<div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true" v-if="cartVisibility">
-		<div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+		<div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
 			<div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
 			
 			<span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
 			<div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-max sm:w-full">
 				<div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 overflow-y-auto" style="max-height: 35rem;">
-					<div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" v-if="cartItems.length">
+					<div class="shadow overflow-x-auto border-b border-gray-200 sm:rounded-lg" v-if="cartItems.length">
 						<table class="min-w-full divide-y divide-gray-200">
 							<thead class="bg-gray-50">
 								<tr>
@@ -31,7 +31,7 @@
 							<tbody class="bg-white divide-y divide-gray-200">
 								<tr v-for="item in cartItems" :key="item.product.id">
 									<td class="px-6 py-4 whitespace-nowrap">
-										<div class="flex items-center">
+										<div class="flex items-center max-w-xs whitespace-normal">
 											<div class="flex-shrink-0 h-10 w-10">
 												<img class="h-10 w-10" :src="item.product.image" alt="" />
 											</div>
