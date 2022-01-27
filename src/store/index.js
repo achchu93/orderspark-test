@@ -5,7 +5,7 @@ import * as cart from './cart'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
 	modules: {
 		cart: {
 			namespaced: true,
@@ -13,3 +13,10 @@ export default new Vuex.Store({
 		}
 	}
 })
+
+store.subscribe((mutation, state) => {
+	// subscribe to update cart items on each mutation
+	localStorage.setItem('storeCart', JSON.stringify(state.cart.products))
+})
+
+export default store

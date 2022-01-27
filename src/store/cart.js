@@ -21,6 +21,11 @@ export const getters = {
 }
 
 export const mutations = {
+	init (state) {
+		if(localStorage.getItem('storeCart')) {
+			Vue.set(state, 'products', JSON.parse(localStorage.getItem('storeCart')))
+		}
+	},
 	addProduct (state, product) {
 		const key = product.id
 		let qty = 1
@@ -35,7 +40,6 @@ export const mutations = {
 		})
 	},
 	changeProductQty (state, { productKey, step }) {
-		console.log(productKey, step);
 		if (step < 0 && state.products[productKey].qty < 2) { // qty can't be less than 1
 			return false
 		}

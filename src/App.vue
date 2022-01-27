@@ -49,6 +49,9 @@ export default {
 	},
 	async mounted(){
 		this.loadProducts()
+	},
+	beforeCreate() {
+		this.$store.commit('cart/init');
 	}
 }
 </script>
