@@ -7,6 +7,12 @@ import './assets/app.css'
 
 Vue.config.productionTip = false
 
+Vue.filter('formatPrice', function (value) {
+	if (!value) return ''
+	value = parseFloat(value)
+	return `$${value.toFixed(2)}`
+})
+
 new Vue({
   store,
   render: h => h(App)
