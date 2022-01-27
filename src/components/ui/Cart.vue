@@ -6,7 +6,7 @@
 			<span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
 			<div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-max sm:w-full">
-				<div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+				<div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 overflow-y-auto" style="max-height: 35rem;">
 					<div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" v-if="cartItems.length">
 						<table class="min-w-full divide-y divide-gray-200">
 							<thead class="bg-gray-50">
